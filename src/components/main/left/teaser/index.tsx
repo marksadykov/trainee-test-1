@@ -30,11 +30,19 @@ export default ({item, index, transform}) => {
 		classes.push(transform('teaser_image'));
 	}
 
+	// console.log('body', body);
+	// console.log('images', images);
+	// console.log('title', title);
+	//
+	// console.log('warning', warning);
+	// console.log('domain', domain);
+	// console.log('region', region);
+
 	return (
 		<Block className={classes.join(' ')}>
 
 			<Block className={transform('title')}>
-				{title}
+				<SmokeText>{title}</SmokeText>
 			</Block>
 
 			{image_src && (
@@ -48,7 +56,7 @@ export default ({item, index, transform}) => {
 			)}
 
 			<Block className={transform('content')}>
-				{body}
+				<SmokeText>{body}</SmokeText>
 			</Block>
 
 			{warning && (
