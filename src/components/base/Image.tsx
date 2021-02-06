@@ -6,13 +6,13 @@ const Image = (props: {src: string, width: string, height: string}): (JSX.Elemen
 	return (
 		<Style>
 			{`
-				#imgStyle {
+				.pictureStyle {
 					background-image: url(${props.src});
 					width: ${props.width}px;
 					height: ${props.height}px;
 				}
 			`}
-			<div id="imgStyle" />
+			<div className="pictureStyle" />
 		</Style>)
 };
 
