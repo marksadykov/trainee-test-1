@@ -1,0 +1,11 @@
+name: 'mail test task'
+description: 'app to defend from xpath and regex'
+author: 'mark sadykov'
+inputs:
+  milliseconds: # change this
+    required: true
+    description: 'input description here'
+    default: 'default value if applicable'
+runs:
+  using: 'node12'
+  main: 'src/index.stories.tsx'
