@@ -1,10 +1,22 @@
 import * as React from 'react';
+import Style from 'style-it';
 
-export default (props) => {
+const Image = (props: {src: string, width: string, height: string}): (JSX.Element) => {
+
 	return (
-		<img
-			alt=""
-			{...props}
-		/>
-	);
+		<Style>
+			{`
+				.pictureStyle {
+					background-image: url(${props.src});
+					width: ${props.width}px;
+					height: ${props.height}px;
+				}
+			`}
+			<div className="pictureStyle" />
+		</Style>)
 };
+
+export default Image;
+
+
+
