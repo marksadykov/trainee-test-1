@@ -30,14 +30,6 @@ export default ({item, index, transform}) => {
 		classes.push(transform('teaser_image'));
 	}
 
-	// console.log('body', body);
-	// console.log('images', images);
-	// console.log('title', title);
-	//
-	// console.log('warning', warning);
-	// console.log('domain', domain);
-	// console.log('region', region);
-
 	return (
 		<Block className={classes.join(' ')}>
 

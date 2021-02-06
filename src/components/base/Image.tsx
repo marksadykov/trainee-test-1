@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Style from 'style-it';
 
-export default (props) => {
+const Image = (props: {src: string, width: string, height: string}): (JSX.Element) => {
 
 	return (
 		<Style>
@@ -15,3 +15,8 @@ export default (props) => {
 			<div id="imgStyle" />
 		</Style>)
 };
+
+export default Image;
+
+
+
