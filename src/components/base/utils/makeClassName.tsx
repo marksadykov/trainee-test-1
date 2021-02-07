@@ -1,3 +1,8 @@
+/**
+ * return generated random and unique name for the element's CSS class
+ * @param   {number} length  number of characters of name class
+ * @return  {string}         random and unique className
+ */
 const makeClassName = (length: number): string => {
     let className = '';
     const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';

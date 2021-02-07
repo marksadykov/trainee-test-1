@@ -1,3 +1,8 @@
+/**
+ * return string in which some Cyrillic characters are replaced by Latin ones
+ * @param   {string} needClean  string to clear
+ * @return  {string}            cleared string
+ */
 const clearSymbols = (needClean: string): string =>  {
 
     return needClean
