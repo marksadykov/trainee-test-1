@@ -3,7 +3,6 @@ import { shallow, configure } from 'enzyme';
 import { shallowToJson } from 'enzyme-to-json';
 import * as Adapter from 'enzyme-adapter-react-16';
 import Image from '../Image';
-import maskSymbols from "@/components/base/utils/maskSymbols";
 
 configure({adapter: new Adapter()});
 describe('Testing component Image', () => {

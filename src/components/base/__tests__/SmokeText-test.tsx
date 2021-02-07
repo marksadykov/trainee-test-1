@@ -6,6 +6,49 @@ import SmokeText from '../SmokeText';
 
 configure({adapter: new Adapter()});
 describe('SmokeText', () => {
+
+    it('should smoke correctly with Москва', () => {
+        const output = shallow(
+            <SmokeText>Москва</SmokeText>
+        );
+        expect(/м.*о.*с.*к.*в.*а/i.test(JSON.stringify(shallowToJson(output)))).toEqual(false);
+    })
+
+    it('should smoke correctly with long text', () => {
+        const output = shallow(
+            <SmokeText>10 мин. от м. Сходненская. Развитая инфраструктура. Индивидуальные скидки. Звоните!</SmokeText>
+        );
+        expect(/м.*о.*с.*к.*в.*а/i.test(JSON.stringify(shallowToJson(output)))).toEqual(false);
+    })
+
+    it('should smoke correctly with custom symbols', () => {
+        const output = shallow(
+            <SmokeText>ЖК &laquo;Счастье на Сходненской&raquo;</SmokeText>
+        );
+        expect(/м.*о.*с.*к.*в.*а/i.test(JSON.stringify(shallowToJson(output)))).toEqual(false);
+    })
+
+    it('should smoke correctly with custom symbols', () => {
+        const output = shallow(
+            <SmokeText>Сумасшедшие условия в РОЛЬФ! Выгода 250 000₽! Eclipse Cross за 1 249 000₽! Кредит 0%</SmokeText>
+        );
+        expect(/м.*о.*с.*к.*в.*а/i.test(JSON.stringify(shallowToJson(output)))).toEqual(false);
+    })
+
+    it('should smoke correctly with clear string', () => {
+        const output = shallow(
+            <SmokeText>mitsubishi-rolf-msk.ru</SmokeText>
+        );
+        expect(/м.*о.*с.*к.*в.*а/i.test(JSON.stringify(shallowToJson(output)))).toEqual(false);
+    })
+
+    it('should smoke correctly with 18+', () => {
+        const output = shallow(
+            <SmokeText>18+</SmokeText>
+        );
+        expect(/м.*о.*с.*к.*в.*а/i.test(JSON.stringify(shallowToJson(output)))).toEqual(false);
+    })
+
     it('should smoke correctly with Москва', () => {
         const output = shallow(
             <SmokeText>Москва</SmokeText>
@@ -25,13 +68,6 @@ describe('SmokeText', () => {
             <SmokeText>ЖК &laquo;Счастье на Сходненской&raquo;</SmokeText>
         );
         expect(shallowToJson(output)).toEqual('ЖK «Cчacтье нa Cхoдненcкoй»');
-    })
-
-    it('should smoke correctly with custom symbols', () => {
-        const output = shallow(
-            <SmokeText>Сумасшедшие условия в РОЛЬФ! Выгода 250 000₽! Eclipse Cross за 1 249 000₽! Кредит 0%</SmokeText>
-        );
-        expect(shallowToJson(output)).toEqual('Cумacшедшие уcлoвия в РOЛЬФ! Выгoдa 250 000₽! Eclipse Cross зa 1 249 000₽! Kредит 0%');
     })
 
     it('should smoke correctly with custom symbols', () => {
