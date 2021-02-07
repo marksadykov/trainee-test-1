@@ -9,8 +9,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: installation of node modules
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+      - name: installing node modules
         run: |
           sudo npm install
       - name: function testing
