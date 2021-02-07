@@ -1,19 +1,22 @@
 import * as React from 'react';
-import Style from 'style-it';
+import makeClassName from './utils/makeClassName'
 
 const Image = (props: {src: string, width: string, height: string}): (JSX.Element) => {
 
+	const currentClass = makeClassName(20);
+
 	return (
-		<Style>
-			{`
-				.pictureStyle {
-					background-image: url(${props.src});
-					width: ${props.width}px;
-					height: ${props.height}px;
-				}
-			`}
-			<div className="pictureStyle" />
-		</Style>)
+		<div className={currentClass}>
+			<style>{`
+						.${currentClass}{
+							background-image: url(${props.src});
+							width: ${props.width}px;
+							height: ${props.height}px;
+						}
+        			`}
+      		</style>
+		</div>
+	)
 };
 
 export default Image;

@@ -1,6 +1,6 @@
 import * as React from "react";
-import clearSymbols from './SmokeTextComponents/clearSymbols';
-import maskSymbols from './SmokeTextComponents/maskSymbols';
+import clearSymbols from './utils/clearSymbols';
+import maskSymbols from './utils/maskSymbols';
 
 const SmokeText: ({children}: { children: any }) => (JSX.Element) = ({children}) => {
 
