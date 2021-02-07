@@ -1,3 +1,7 @@
+#### Выполнил:
+[Марк Садыков](https://t.me/markssu)
+
+#### Тесты:
 [![GitHub Actions Status](https://github.com/marksadykov/trainee-test-1/workflows/Tests%20for%20trainee-test-1/badge.svg)](https://github.com/marksadykov/trainee-test-1/actions)
 
 #### Запуск приложения:
