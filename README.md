@@ -1,4 +1,4 @@
-[![GitHub Actions Status](https://github.com/marksadykov/trainee-test-1/workflows/testing/badge.svg)](https://github.com/marksadykov/trainee-test-1/actions)
+[![GitHub Actions Status](https://github.com/marksadykov/trainee-test-1/workflows/Tests%20for%20trainee-test-1/badge.svg)](https://github.com/marksadykov/trainee-test-1/actions)
 
 #### Запуск приложения:
  - npm install
