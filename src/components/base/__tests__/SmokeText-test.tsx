@@ -12,54 +12,42 @@ describe('SmokeText', () => {
         );
         expect(shallowToJson(output)).toEqual('Mocквa');
     })
-});
 
-describe('SmokeText', () => {
     it('should smoke correctly with long text', () => {
         const output = shallow(
             <SmokeText>10 мин. от м. Сходненская. Развитая инфраструктура. Индивидуальные скидки. Звоните!</SmokeText>
         );
         expect(shallowToJson(output)).toEqual('10 мин. oт м. Cхoдненcкaя. Рaзвитaя инфрacтруктурa. Индивидуaльные cкидки. Звoните!');
     })
-});
 
-describe('SmokeText', () => {
     it('should smoke correctly with custom symbols', () => {
         const output = shallow(
             <SmokeText>ЖК &laquo;Счастье на Сходненской&raquo;</SmokeText>
         );
         expect(shallowToJson(output)).toEqual('ЖK «Cчacтье нa Cхoдненcкoй»');
     })
-});
 
-describe('SmokeText', () => {
     it('should smoke correctly with custom symbols', () => {
         const output = shallow(
             <SmokeText>Сумасшедшие условия в РОЛЬФ! Выгода 250 000₽! Eclipse Cross за 1 249 000₽! Кредит 0%</SmokeText>
         );
         expect(shallowToJson(output)).toEqual('Cумacшедшие уcлoвия в РOЛЬФ! Выгoдa 250 000₽! Eclipse Cross зa 1 249 000₽! Kредит 0%');
     })
-});
 
-describe('SmokeText', () => {
     it('should smoke correctly with custom symbols', () => {
         const output = shallow(
             <SmokeText>Сумасшедшие условия в РОЛЬФ! Выгода 250 000₽! Eclipse Cross за 1 249 000₽! Кредит 0%</SmokeText>
         );
         expect(shallowToJson(output)).toEqual('Cумacшедшие уcлoвия в РOЛЬФ! Выгoдa 250 000₽! Eclipse Cross зa 1 249 000₽! Kредит 0%');
     })
-});
 
-describe('SmokeText', () => {
     it('should smoke correctly with clear string', () => {
         const output = shallow(
             <SmokeText>mitsubishi-rolf-msk.ru</SmokeText>
         );
         expect(shallowToJson(output)).toEqual('mitsubishi-rolf-msk.ru');
     })
-});
 
-describe('SmokeText', () => {
     it('should smoke correctly with 18+', () => {
         const output = shallow(
             <SmokeText>18+</SmokeText>
