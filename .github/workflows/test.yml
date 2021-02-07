@@ -1,5 +1,5 @@
-name: 'test'
-on: # rebuild any PRs and main branch changes
+name: 'Tests for trainee-test-1'
+on:
   pull_request:
   push:
     branches:
@@ -9,8 +9,11 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - run: |
+      - name: installation of node modules
+        uses: actions/checkout@v2
+        run: |
           sudo npm install
-      - run: |
+      - name: function testing
+        uses: actions/checkout@v2
+        run: |
           sudo npm run test
