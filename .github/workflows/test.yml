@@ -14,6 +14,5 @@ jobs:
         run: |
           sudo npm install
       - name: function testing
-        uses: actions/checkout@v2
         run: |
           sudo npm run test
