@@ -1,3 +1,5 @@
+![Tests for trainee-test-1](https://github.com/marksadykov/trainee-test-1/workflows/test/badge.svg)
+
 #### Запуск приложения:
  - npm install
  - npm start (запустится Storybook)
